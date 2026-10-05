@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Each section is its own visual world, like clips on a timeline. */
+.section {
+  padding-block: var(--space-xl);
+}
+
+.section--hood {
+  background: var(--hood);
+  color: var(--on-hood);
+}
+
+.section--beak {
+  background: var(--beak);
+  color: var(--on-beak);
+}
+
+.section__title {
+  font-size: var(--step-4);
+  margin-bottom: var(--space-l);
+}
+
+/* Hero */
+.hero {
+  padding-block: var(--space-l);
+}
+
+.hero__grid {
+  display: grid;
+  gap: var(--space-l);
+  align-items: center;
+}
+
+.hero__kicker {
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.hero__title {
+  font-size: var(--step-hero);
+  line-height: 0.82;
+  letter-spacing: -0.01em;
+  margin: 0.2em 0 0.3em -0.04em;
+}
+
+.hero__lead {
+  font-size: var(--step-1);
+  line-height: 1.45;
+  max-width: 34ch;
+  margin-bottom: var(--space-m);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+}
+
+@media (min-width: 52rem) {
+  .hero__grid {
+    grid-template-columns: 1.35fr 1fr;
+  }
+}
+
+/* Bio */
+.bio__grid {
+  display: grid;
+  gap: var(--space-l);
+}
+
+.bio__text {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  max-width: var(--measure);
+}
+
+.bio__text p + p {
+  margin-top: 1em;
+}
+
+@media (min-width: 52rem) {
+  .bio__grid {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Edits */
+.reel {
+  display: grid;
+  gap: var(--space-l) var(--space-m);
+}
+
+@media (min-width: 52rem) {
+  .reel {
+    grid-template-columns: 1.6fr 1fr;
+    align-items: end;
+  }
+}
+
+.reel__note {
+  margin-top: var(--space-l);
+  color: var(--on-hood-soft);
+  max-width: var(--measure);
+}
+
+/* Contact */
+.contact__lead {
+  font-size: var(--step-1);
+  max-width: 36ch;
+  margin-bottom: var(--space-m);
+}
+
+.contact__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-s) var(--space-m);
+}
+
+.contact__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s) var(--space-m);
+  margin-top: var(--space-l);
+  padding: 0;
+  list-style: none;
+  font-size: var(--step-1);
+  font-weight: 700;
+}
+
+/* Footer */
+.footer {
+  background: var(--beak);
+  color: var(--on-beak);
+  padding-block: var(--space-m);
+  border-top: var(--stroke) solid var(--outline);
+  font-size: var(--step--1);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-s);
+}

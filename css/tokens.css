@@ -1,0 +1,89 @@
+/* Design tokens. Palette sampled from the mascot: hood slate, periwinkle, beak orange. */
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --bg: oklch(96.5% 0.014 275);
+  --bg-2: oklch(92% 0.026 275);
+  --hood: oklch(33% 0.034 262);
+  --hood-deep: oklch(26% 0.03 264);
+  --periwinkle: oklch(80% 0.062 276);
+  --beak: oklch(73% 0.145 62);
+  --beak-hot: oklch(67% 0.165 52);
+
+  /* Text */
+  --ink: oklch(24% 0.03 265);
+  --ink-soft: oklch(44% 0.03 265);
+  --on-hood: oklch(95% 0.014 275);
+  --on-hood-soft: oklch(80% 0.04 275);
+  --on-beak: oklch(22% 0.03 265);
+
+  /* Lines and the cartoon outline used by stickers */
+  --outline: oklch(22% 0.03 265);
+  --line: oklch(24% 0.03 265 / 0.14);
+  --shadow: var(--outline);
+
+  /* Type */
+  --font: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --step--1: clamp(0.84rem, 0.8rem + 0.15vw, 0.92rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.35rem + 1.2vw, 2.25rem);
+  --step-3: clamp(2.2rem, 1.6rem + 3vw, 4rem);
+  --step-4: clamp(2.6rem, 1.4rem + 6vw, 6.5rem);
+  --step-hero: clamp(4.5rem, 1rem + 17vw, 13rem);
+
+  /* Space */
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2.5rem);
+  --space-s: clamp(0.75rem, 0.6rem + 0.5vw, 1rem);
+  --space-m: clamp(1.25rem, 1rem + 1vw, 2rem);
+  --space-l: clamp(2.5rem, 1.8rem + 3vw, 5rem);
+  --space-xl: clamp(4rem, 2.5rem + 7vw, 10rem);
+  --measure: 62ch;
+  --max: 78rem;
+
+  /* Shape */
+  --radius: 1.1rem;
+  --radius-pill: 999px;
+  --stroke: 3px;
+  --lift: 6px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);   /* quint */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 160ms;
+  --dur: 420ms;
+  --dur-slow: 900ms;
+
+  --topbar-h: 7.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: oklch(21% 0.028 266);
+    --bg-2: oklch(26% 0.032 266);
+    --hood: oklch(15.5% 0.024 266);
+    --hood-deep: oklch(12% 0.02 266);
+    --periwinkle: oklch(72% 0.07 276);
+    --ink: oklch(95% 0.014 275);
+    --ink-soft: oklch(79% 0.035 275);
+    --line: oklch(95% 0.014 275 / 0.16);
+    --outline: oklch(10% 0.02 266);
+    --shadow: oklch(60% 0.09 276);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: oklch(21% 0.028 266);
+  --bg-2: oklch(26% 0.032 266);
+  --hood: oklch(15.5% 0.024 266);
+  --hood-deep: oklch(12% 0.02 266);
+  --periwinkle: oklch(72% 0.07 276);
+  --ink: oklch(95% 0.014 275);
+  --ink-soft: oklch(79% 0.035 275);
+  --line: oklch(95% 0.014 275 / 0.16);
+  --outline: oklch(10% 0.02 266);
+  --shadow: oklch(60% 0.09 276);
+}
